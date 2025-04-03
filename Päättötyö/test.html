@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Palvelut</h1>
+            <h2>Palveluihin kuuluu:</h2>
+            <ul>
+                <li>Maalaus</li>
+                <li>Tapetointi</li>
+            </ul>
+            <p>Maalaus on sisätiloihin tai ulkotiloihin kuuluva palvelu, joka on halpaa ja laadukasta</p>
+            <p>Tapetointi on sisätiloihin kuuluva palvelu, joka on halpaa ja laadukasta myös</p>
+            <div class="tärkeä">
+            <p>Maalaus kannattaa suunnitella ennen ostoa, että tiedät miten haluat maalauksen sopivan kotiisi!</p>
+            <p>Suunnittelun voi tehdä värien testaus osiossa, joka löytyy ylhäällä olevista painikkeista!</p>
+            </div>
+            </div>
+            <img class="malaus" src="https://talonmaalaus.pro/wp-content/uploads/2018/10/lattian-maalaus.jpg" alt="maalaus">
+            <img class="tape" src="https://perinnemestari.fi/sites/default/files/tapetti-katkaisu_MG_2331.jpg" alt="Tapetointi">
+</body>
+</html>
+
+// Valitaan elementit
+const colorButtons = document.querySelectorAll('.color');
+const surfaces = document.querySelectorAll('.test-surface');
+const clearButton = document.getElementById('clear-btn');
+
+let selectedSurfaceIndex = 0; // 0 = Pinta 1, 1 = Pinta 2
+
+// Kuunnellaan värin valintaa
+colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedColor = button.style.backgroundColor;
+
+        // Vaihda valitun pinnan väriä
+        surfaces[selectedSurfaceIndex].style.backgroundColor = selectedColor;
+
+        // Vaihda seuraavaan pintaan
+        selectedSurfaceIndex = (selectedSurfaceIndex + 1) % surfaces.length;
+    });
+});
+
+// Tyhjennä värit
+clearButton.addEventListener('click', () => {
+    surfaces.forEach(surface => {
+        surface.style.backgroundColor = ''; // Tyhjä arvo poistaa värin
+    });
+    selectedSurfaceIndex = 0; // Palautetaan valinta ensimmäiseen pintaanc,WÅpekit  	+2
+});
+
+
+"https://static.vecteezy.com/system/resources/previews/018/930/413/large_2x/instagram-logo-instagram-icon-transparent-free-png.png"
+
+https://toppng.com/uploads/preview/youtube-icon-logo-transparent-youtube-11553542027nec8a4iwhh.png" 
+<img class="suport" src="https://cdn-icons-png.flaticon.com/512/4993/4993995.png" alt="info">

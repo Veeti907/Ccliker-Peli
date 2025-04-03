@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Yhteystiedot</title>
+        <link rel="stylesheet" href="style-yht.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <body class="bg-light">
+            <nav class="navbar navbar-expand-md bg-body-tertiary">
+                <div class="container-fluid">
+                  <i class="bi bi-palette-fill mx-2"></i>
+                  <a class="navbar-brand fw-bold" href="index.html">Kotkantien Maalaus</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto h5">
+                      <a class="nav-link display-2 " aria-current="page" href="Palvelut.html">Palvelut</a>
+                      <a class="nav-link display-2" href="Värit.html">Värit</a>
+                      <a class="nav-link display-2" href="Galleria.html">Galleria</a>
+                      <a class="nav-link display-2" href="Yhteystiedot.html">Yhteystiedot</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div class="text-center teksti">
+            <h1 class="text-center mt-4 mb-4 otsik">Ota yhteyttä!</h1>
+
+            <div class="tekstit">
+                <p> Osoiteemme on: Kotkantie 3</p>
+                <p>Postinumero: 90100 Oulu</p>
+                <p>Puhelinnumero: 044 999 888 99</p>
+                <p>Sähköposti: info@kotkantienmaalaus.fi</p>
+                <p class="mt-5" id="lähetysteksti"></p>
+              </div>
+            </div>
+            
+<!-- Button to Open the Modal -->
+ 
+ <div id="Buttons" class="d-flex align-items-center justify-content-center">
+<button id="ModalBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Lähetä meille viesti tai valituksesi
+  </button>
+</div>
+
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Ota Yhteyttä!</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <input type="text" placeholder="Koko Nimesi">
+          <br>
+          <br>
+          <input type="text" placeholder="Sähköposti">
+          <br>
+          <br>
+          <textarea placeholder="Viesti..." name="" id=""></textarea>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Sulje</button>
+          <button onclick="Myfunction3()" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Lähetä</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+                
+
+<footer class="fotr">
+    <i class="bi bi-youtube icon" onclick="Myfunction1()"></i>
+    <i class="bi bi-instagram icon2" onclick="Myfunction2()"></i>
+
+    <!--hinnasto kortti 1-->
+    <div class="row mt-5">
+      <div class="card col  text-center">
+          <div class="card-body">
+            <h4 class="card-title korrti">Maalaus</h4>
+            <p class="card-text">Pelkkä maalaus</p>
+            <h4 class="card-title korrti">25€</h4>
+            <a href="#" class="card-link">Osta</a>
+          </div>
+        </div>
+        <!--hinnasto kortti 2-->
+        <div class="card col text-center">
+          <div class="card-body">
+            <h4 class="card-title korrti">Maalaus ja tapetointi</h4>
+            <p class="card-text">Maalauksen ja tapetoinnin hinta</p>
+            <h4 class="card-title korrti">50€</h4>
+            <a href="#" class="card-link">Osta</a>
+          </div>
+        </div>
+        <!--hinnasto kortti 3-->
+        <div class="card col  text-center">
+          <div class="card-body">
+            <h4 class="card-title korrti">Tapetointi</h4>
+            <p class="card-text">Pelkkä tapetointi</p>
+            <h4 class="card-title korrti">20€</h4>
+            <a href="#" class="card-link">Osta</a>
+          </div>
+        </div>
+      </div>
+</footer>
+            
+        </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function Myfunction1() {
+                 window.open("https://www.youtube.com/");
+            }
+        </script>
+        <script>
+            function Myfunction2() {
+                 window.open("https://www.instagram.com/");
+            }
+        </script>
+        <script src="yhteys.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+</html>

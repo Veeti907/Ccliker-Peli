@@ -1,0 +1,104 @@
+div {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.068);
+    color: white;
+    width: fit-content;
+    box-shadow: 0px 0px 25px black;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+li::marker {
+    margin-left: auto;
+    margin-right: auto;
+    color: #2b2b2b;
+}
+body {
+    background-color: rgb(100, 100, 100);
+    
+}
+h1 {
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-text-stroke: 0.5px black;
+}
+h2 {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p {
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.maalaus {
+    size: 20px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 25px black;
+}
+.navigointi {
+    background-color: darkgrey;
+    border: none;
+    box-shadow: 0px 0px 25px white;
+    border-radius: 12px;
+    
+    text-align: center;
+    margin: 0 auto;
+}
+.tapetointi {
+    size: 20px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 20px black;
+}
+legend {
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    box-shadow: 0px 0px 25px black;
+}
+button {
+  text-align: center;
+  background-color: white;
+  border: 2px solid #4b4b4b;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  margin: 10px 100px;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10%;
+  will-change: transform;
+  box-shadow: 0px 0px 25px black;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
