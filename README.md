@@ -6,9 +6,9 @@ vuokaavio pelistä:
 
 
 kuvat pelistä:
-[alt text](![cclicker1](https://github.com/user-attachments/assets/99a07a41-f7dd-425b-8c84-1dd95d72033f)
-)
+
 Aloitus näyttö mikä näkyy aina kun aukaiset pelin
+![cclicker1](https://github.com/user-attachments/assets/e24d1d48-9a0f-4ed0-a36e-acc7b3863134)
 
 [(https://osekk-my.sharepoint.com/:i:/g/personal/s4bave00_students_osao_fi/EWTwoikXHepGoFTQfnJkMZgB9CVEjQpeRRgF_KoBZHgPmw?e=b58KFr)]
 kauppa näkymä, joka näkyy kun painaa kauppa nappia
