@@ -5,16 +5,24 @@ vuokaavio pelistä:
 [(https://osekk-my.sharepoint.com/:i:/g/personal/s4bave00_students_osao_fi/EQRf9qKzfQVJl_EhZANSFTIBtVa8DKyskmSiAcAUPsHQUQ?e=XmJK5f)]
 
 
-kuvat pelistä:
 
+    Aloitusnäyttö
 Aloitus näyttö mikä näkyy aina kun aukaiset pelin
 ![cclicker1](https://github.com/user-attachments/assets/e24d1d48-9a0f-4ed0-a36e-acc7b3863134)
 
-[(https://osekk-my.sharepoint.com/:i:/g/personal/s4bave00_students_osao_fi/EWTwoikXHepGoFTQfnJkMZgB9CVEjQpeRRgF_KoBZHgPmw?e=b58KFr)]
+
+    Kauppanäkymä
+kauppa näkymä, joka näkyy kun painaa kauppa nappia
+![cclicker2](https://github.com/user-attachments/assets/87b37450-cbd4-4afc-bbdb-b2dcec8db60e)
+
 kauppa näkymä, joka näkyy kun painaa kauppa nappia
 
-[(https://osekk-my.sharepoint.com/:i:/g/personal/s4bave00_students_osao_fi/Eb8eTU_qUClJgc5FboQZCL8BjD_aX-6Pz9CIgXnlPTwu1Q?e=Ubv1ya)]
+
+    Tallennusnäkymä
 tallennus painiketta painettu kuva
+![cclicker3](https://github.com/user-attachments/assets/94073d0d-6153-4c49-b267-f67a2d8f04b3)
+
+
 
 ```
 private void pictureBox1_Click(object sender, EventArgs e)
@@ -56,5 +64,5 @@ private void OnTimedEvent(Object source, ElapsedEventArgs e)
 ```
 tämä koodi on pelin halvin päivitys eli autoclicker, ja tämä autoclicker painaa keksiä automaattisesti joka 5 sekuntti
 
-Jatkokehitysideat:
+    Jatkokehitysideat:
 Voisin lisätä peliin hieman enemmän taustaa ja ulkonäköä. Voisin myös keksiä uusia animaatioita kun keksiä klikataan. Voisin myös keksiä uusia päivityksiä peliin
