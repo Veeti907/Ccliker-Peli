@@ -6,7 +6,8 @@ vuokaavio pelistä:
 
 
 kuvat pelistä:
-[(https://osekk-my.sharepoint.com/:i:/g/personal/s4bave00_students_osao_fi/Ef-0e6tbGldBmqa5VO4CCp4Bc9WlFKThKJHB-QI63a5l2w?e=dmvuHj)]
+[alt text](![cclicker1](https://github.com/user-attachments/assets/99a07a41-f7dd-425b-8c84-1dd95d72033f)
+)
 Aloitus näyttö mikä näkyy aina kun aukaiset pelin
 
 [(https://osekk-my.sharepoint.com/:i:/g/personal/s4bave00_students_osao_fi/EWTwoikXHepGoFTQfnJkMZgB9CVEjQpeRRgF_KoBZHgPmw?e=b58KFr)]
