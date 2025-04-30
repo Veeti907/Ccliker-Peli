@@ -23,7 +23,7 @@ namespace Näyttötyö_peli
             timer.Elapsed += OnTimedEvent;
             timer.AutoReset = true;
             timer.Interval = 5000;
-            robotti.Interval = 1000;
+            robot.Interval = 1000;
             
 
         }
@@ -39,20 +39,20 @@ namespace Näyttötyö_peli
             }
 
             //päivitetään label automaattisesti
-            if (Keksit.InvokeRequired)
+            if (Cookies.InvokeRequired)
             {
-                Keksit.Invoke(new Action(() => Keksit.Text = "🍪:" + balance.ToString()));
+                Cookies.Invoke(new Action(() => Cookies.Text = "🍪:" + balance.ToString()));
             }
             else
             {
-                Keksit.Text = "🍪:" + balance.ToString();
+                Cookies.Text = "🍪:" + balance.ToString();
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             //kun keksiä klikkaa niin tulee yksi keksi lisää
             balance += 1;
-            Keksit.Text = "🍪:" + balance;
+            Cookies.Text = "🍪:" + balance;
 
             //kerroin mekanismi että keksejä tulee 2 yhdellä klikkausella tai 3, 4...
             if (multiplier > 0)
@@ -63,11 +63,12 @@ namespace Näyttötyö_peli
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-            //säädetään keksin kuvaa että hiiren painike alhaalla se muuttaa kokoa pienemmäksi
-            pictureBox1.Width = (int)(pictureBox1.Width * 0.9);
-            pictureBox1.Height = (int)(pictureBox1.Height * 0.9);
+        { 
+                pictureBox1.Width = (int)(pictureBox1.Width * 0.9);
+                pictureBox1.Height = (int)(pictureBox1.Height * 0.9);
         }
+
+        
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
@@ -76,47 +77,33 @@ namespace Näyttötyö_peli
             pictureBox1.Height = (int)(pictureBox1.Height / 0.9);
         }
 
-        private void Keksit_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void KauppaBtn_Click(object sender, EventArgs e)
+        private void StoreBtn_Click(object sender, EventArgs e)
         {
             //kun painetaan kauppa paneeli tulee esiin ja klikkaus näyttö lähtee näkyvistä
             panel1.Visible = true;
             panel2.Visible = false;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             //formin latauksella päivitetään teksti tiedostosta aijemmat lukemat
             LoadBalanceFromFile();
             UpdateBalance();
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void closeBtn_Click(object sender, EventArgs e)
         {
             //kauppa kiinni painike joka ottaaa kauppa paneelin pois ja klikkaus paneelin näkyviin
             panel1.Visible = false;
             panel2.Visible = true;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buyMulti_Click_1(object sender, EventArgs e)
         {
             //kertoimen osto, jossa kerroin kasvaa ja päivitetäänb label automaattisesti
             if (balance >= 1000)
             {
                 balance -= 1000;
-                Keksit.Invoke(new Action(() => Keksit.Text = "🍪:" + balance.ToString()));
+                Cookies.Invoke(new Action(() => Cookies.Text = "🍪:" + balance.ToString()));
                 multiplier++;
 
             }
@@ -127,7 +114,7 @@ namespace Näyttötyö_peli
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buyAutoclicker_Click(object sender, EventArgs e)
         {
             //autoclikcer osto jossa tapahtuu balancen muutos ja timerin päälle laitto ja myös labelin päivitys
             // otetaan autoclicker label pois ja nappi ja korvataan ne boost napilla ja labelilla
@@ -136,10 +123,10 @@ namespace Näyttötyö_peli
             {
 
                 balance -= 100;
-                Keksit.Invoke(new Action(() => Keksit.Text = "🍪:" + balance.ToString()));
+                Cookies.Invoke(new Action(() => Cookies.Text = "🍪:" + balance.ToString()));
                 timer.Start();
 
-                button2.Visible = false;
+                buyAutoclicker.Visible = false;
                 Boostbtn.Visible = true;
                 BoostLabel.Visible = true;
             }
@@ -174,20 +161,20 @@ namespace Näyttötyö_peli
             if (!timer.Enabled)
             {
                 seconds = 30;
-                button4.Text = seconds.ToString();
-                robotti.Start();
-                button4.Enabled = false;
+                RobotBtn.Text = seconds.ToString();
+                robot.Start();
+                RobotBtn.Enabled = false;
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void RobotBtn_Click(object sender, EventArgs e)
         {
             //Käytetään robotti auttajaa joka antaa 1000 keksiä heti ja aloitetaan timer että sitä ei voi painaa heit uudelleen
             if (balance >= 1000)
             {
                 StartTimer();
                 balance += 1000;
-                Keksit.Invoke(new Action(() => Keksit.Text = "🍪:" + balance.ToString()));
+                Cookies.Invoke(new Action(() => Cookies.Text = "🍪:" + balance.ToString()));
             }
             //jos keksit eivät riitä
             if (balance < 1000)
@@ -201,16 +188,16 @@ namespace Näyttötyö_peli
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void autobotBtn_Click(object sender, EventArgs e)
         {
             //ostetaan auttaja robotti kaupasta joka antaa painikkeen näkyviin ja pictureboxin
             //label päivittyy automaattisesti
             if (balance >= 10000)
             {
                 balance -= 10000;
-                button4.Visible = true;
+                RobotBtn.Visible = true;
                 pictureBox5.Visible = true;
-                Keksit.Invoke(new Action(() => Keksit.Text = "🍪:" + balance.ToString()));
+                Cookies.Invoke(new Action(() => Cookies.Text = "🍪:" + balance.ToString()));
             }
             //jos keksit eivät riitä
             if (balance < 10000)
@@ -219,21 +206,23 @@ namespace Näyttötyö_peli
             }
         }
 
-        private void robotti_Tick(object sender, EventArgs e)
+        private void robot_Tick(object sender, EventArgs e)
         {
-            //napin ajastin että nappia ei voi painaa 30 sekunnin sisällä uudelleen ja näytä jäljellä oleva aika
-            if (seconds > 0)
+            //käyetään for looppia laskemaan aikaa ja kun se loppuu niin robotti nappi tulee näkyviin
+            for (int i = seconds; i > 0; i--)
             {
                 seconds--;
-                button4.Text = seconds.ToString();
-                button4.Enabled = false;
-            }
-            else
-            //pysäytä timer ja laita button tekstiin Käynnistä robotti ja kun on kulunut 30 sekunttia niin nappia voi painaa uudelleen
-            {
-                robotti.Stop();
-                button4.Text = "Käynnistä Robotti";
-                button4.Enabled = true;
+                RobotBtn.Text = seconds.ToString();
+                RobotBtn.Enabled = false;
+
+                //lopeta looppi kun aika on 0
+                if (seconds == 0)
+                {
+                    robot.Stop();
+                    RobotBtn.Text = "Käynnistä Robotti";
+                    RobotBtn.Enabled = true;
+                    break;
+                }
             }
         }
         private void SaveBalanceTofile()
@@ -278,7 +267,7 @@ namespace Näyttötyö_peli
         private void UpdateBalance()
         {
             //päivittää balancen tiedoston mukaan
-            Keksit.Text = $"🍪:{balance}";
+            Cookies.Text = $"🍪:{balance}";
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -288,21 +277,21 @@ namespace Näyttötyö_peli
             MessageBox.Show("Tallennettu!");
         }
 
-        private void KauppaBtn_MouseEnter(object sender, EventArgs e)
+        private void StoreBtn_MouseEnter(object sender, EventArgs e)
         {
             //kun hiiri on napin päällä niin sen väriä ja fontin väriä muutetaan
-            KauppaBtn.BackColor = Color.White;
-            KauppaBtn.ForeColor = Color.Black;
-            KauppaBtn.FlatAppearance.BorderColor = Color.Black;
+            StoreBtn.BackColor = Color.White;
+            StoreBtn.ForeColor = Color.Black;
+            StoreBtn.FlatAppearance.BorderColor = Color.Black;
             
         }
 
-        private void KauppaBtn_MouseLeave(object sender, EventArgs e)
+        private void StoreBtn_MouseLeave(object sender, EventArgs e)
         {
             //palautetaan oletus värit kun hiiri lähtee napin päältä pois
-            KauppaBtn.BackColor = Color.Transparent;
-            KauppaBtn.ForeColor = Color.White;
-            KauppaBtn.FlatAppearance.BorderColor = Color.White;
+            StoreBtn.BackColor = Color.Transparent;
+            StoreBtn.ForeColor = Color.White;
+            StoreBtn.FlatAppearance.BorderColor = Color.White;
         }
     }
 }

@@ -7,7 +7,6 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <BaseOutputPath>C:\Users\s4bave00\OneDrive - OSAO\Visual Studio\Näyttötyö-peli\Peli</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

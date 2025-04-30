@@ -30,14 +30,14 @@
         {
             components = new System.ComponentModel.Container();
             pictureBox1 = new PictureBox();
-            Keksit = new Label();
-            KauppaBtn = new Button();
+            Cookies = new Label();
+            StoreBtn = new Button();
             panel1 = new Panel();
             BoostLabel = new Label();
             Boostbtn = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            autobotBtn = new Button();
+            buyAutoclicker = new Button();
+            buyMulti = new Button();
             closeBtn = new Button();
             label3 = new Label();
             label2 = new Label();
@@ -46,8 +46,8 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox5 = new PictureBox();
-            button4 = new Button();
-            robotti = new System.Windows.Forms.Timer(components);
+            RobotBtn = new Button();
+            robot = new System.Windows.Forms.Timer(components);
             panel2 = new Panel();
             SaveBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -74,45 +74,44 @@
             pictureBox1.MouseDown += pictureBox1_MouseDown;
             pictureBox1.MouseUp += pictureBox1_MouseUp;
             // 
-            // Keksit
+            // Cookies
             // 
-            Keksit.BackColor = Color.Transparent;
-            Keksit.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Keksit.ForeColor = Color.White;
-            Keksit.Location = new Point(35, 28);
-            Keksit.Name = "Keksit";
-            Keksit.Size = new Size(133, 53);
-            Keksit.TabIndex = 1;
-            Keksit.Text = "🍪: 0";
-            Keksit.Click += Keksit_Click;
+            Cookies.BackColor = Color.Transparent;
+            Cookies.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Cookies.ForeColor = Color.White;
+            Cookies.Location = new Point(35, 28);
+            Cookies.Name = "Cookies";
+            Cookies.Size = new Size(133, 53);
+            Cookies.TabIndex = 1;
+            Cookies.Text = "🍪: 0";
             // 
-            // KauppaBtn
+            // StoreBtn
             // 
-            KauppaBtn.AutoSize = true;
-            KauppaBtn.BackColor = Color.Transparent;
-            KauppaBtn.Cursor = Cursors.Hand;
-            KauppaBtn.FlatAppearance.BorderColor = Color.White;
-            KauppaBtn.FlatStyle = FlatStyle.Flat;
-            KauppaBtn.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            KauppaBtn.ForeColor = Color.White;
-            KauppaBtn.Location = new Point(657, 23);
-            KauppaBtn.Name = "KauppaBtn";
-            KauppaBtn.Size = new Size(100, 77);
-            KauppaBtn.TabIndex = 2;
-            KauppaBtn.Text = "Kauppa";
-            KauppaBtn.UseVisualStyleBackColor = false;
-            KauppaBtn.Click += KauppaBtn_Click;
-            KauppaBtn.MouseEnter += KauppaBtn_MouseEnter;
-            KauppaBtn.MouseLeave += KauppaBtn_MouseLeave;
+            StoreBtn.AutoSize = true;
+            StoreBtn.BackColor = Color.Transparent;
+            StoreBtn.Cursor = Cursors.Hand;
+            StoreBtn.FlatAppearance.BorderColor = Color.White;
+            StoreBtn.FlatStyle = FlatStyle.Flat;
+            StoreBtn.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            StoreBtn.ForeColor = Color.White;
+            StoreBtn.Location = new Point(657, 23);
+            StoreBtn.Name = "StoreBtn";
+            StoreBtn.Size = new Size(100, 77);
+            StoreBtn.TabIndex = 2;
+            StoreBtn.Text = "Kauppa";
+            StoreBtn.UseVisualStyleBackColor = false;
+            StoreBtn.Click += StoreBtn_Click;
+            StoreBtn.MouseEnter += StoreBtn_MouseEnter;
+            StoreBtn.MouseLeave += StoreBtn_MouseLeave;
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Desktop;
             panel1.Controls.Add(BoostLabel);
             panel1.Controls.Add(Boostbtn);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(autobotBtn);
+            panel1.Controls.Add(buyAutoclicker);
+            panel1.Controls.Add(buyMulti);
             panel1.Controls.Add(closeBtn);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -149,35 +148,35 @@
             Boostbtn.Visible = false;
             Boostbtn.Click += Boostbtn_Click;
             // 
-            // button3
+            // autobotBtn
             // 
-            button3.Location = new Point(586, 224);
-            button3.Name = "button3";
-            button3.Size = new Size(132, 24);
-            button3.TabIndex = 9;
-            button3.Text = "10,000 keksiä";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            autobotBtn.Location = new Point(586, 224);
+            autobotBtn.Name = "autobotBtn";
+            autobotBtn.Size = new Size(132, 24);
+            autobotBtn.TabIndex = 9;
+            autobotBtn.Text = "10,000 keksiä";
+            autobotBtn.UseVisualStyleBackColor = true;
+            autobotBtn.Click += autobotBtn_Click;
             // 
-            // button2
+            // buyAutoclicker
             // 
-            button2.Location = new Point(371, 225);
-            button2.Name = "button2";
-            button2.Size = new Size(115, 23);
-            button2.TabIndex = 8;
-            button2.Text = "100 keksiä";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            buyAutoclicker.Location = new Point(371, 225);
+            buyAutoclicker.Name = "buyAutoclicker";
+            buyAutoclicker.Size = new Size(115, 23);
+            buyAutoclicker.TabIndex = 8;
+            buyAutoclicker.Text = "100 keksiä";
+            buyAutoclicker.UseVisualStyleBackColor = true;
+            buyAutoclicker.Click += buyAutoclicker_Click;
             // 
-            // button1
+            // buyMulti
             // 
-            button1.Location = new Point(94, 225);
-            button1.Name = "button1";
-            button1.Size = new Size(125, 23);
-            button1.TabIndex = 7;
-            button1.Text = "1000 keksiä";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            buyMulti.Location = new Point(94, 225);
+            buyMulti.Name = "buyMulti";
+            buyMulti.Size = new Size(125, 23);
+            buyMulti.TabIndex = 7;
+            buyMulti.Text = "1000 keksiä";
+            buyMulti.UseVisualStyleBackColor = true;
+            buyMulti.Click += buyMulti_Click_1;
             // 
             // closeBtn
             // 
@@ -189,7 +188,7 @@
             closeBtn.TabIndex = 6;
             closeBtn.Text = "X";
             closeBtn.UseVisualStyleBackColor = false;
-            closeBtn.Click += button1_Click;
+            closeBtn.Click += closeBtn_Click;
             // 
             // label3
             // 
@@ -267,30 +266,30 @@
             pictureBox5.Visible = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
-            // button4
+            // RobotBtn
             // 
-            button4.Cursor = Cursors.Hand;
-            button4.Location = new Point(653, 242);
-            button4.Name = "button4";
-            button4.Size = new Size(104, 41);
-            button4.TabIndex = 5;
-            button4.Text = "Käynnistä Robotti";
-            button4.UseVisualStyleBackColor = true;
-            button4.Visible = false;
-            button4.Click += button4_Click;
+            RobotBtn.Cursor = Cursors.Hand;
+            RobotBtn.Location = new Point(653, 242);
+            RobotBtn.Name = "RobotBtn";
+            RobotBtn.Size = new Size(104, 41);
+            RobotBtn.TabIndex = 5;
+            RobotBtn.Text = "Käynnistä Robotti";
+            RobotBtn.UseVisualStyleBackColor = true;
+            RobotBtn.Visible = false;
+            RobotBtn.Click += RobotBtn_Click;
             // 
-            // robotti
+            // robot
             // 
-            robotti.Interval = 30000;
-            robotti.Tick += robotti_Tick;
+            robot.Interval = 30000;
+            robot.Tick += robot_Tick;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.Desktop;
             panel2.Controls.Add(SaveBtn);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(KauppaBtn);
-            panel2.Controls.Add(Keksit);
+            panel2.Controls.Add(RobotBtn);
+            panel2.Controls.Add(StoreBtn);
+            panel2.Controls.Add(Cookies);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(pictureBox5);
             panel2.Location = new Point(0, 0);
@@ -315,8 +314,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -336,8 +335,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Label Keksit;
-        private Button KauppaBtn;
+        private Label Cookies;
+        private Button StoreBtn;
         private Panel panel1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
@@ -346,14 +345,14 @@
         private Label label2;
         private Label label1;
         private Button closeBtn;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button autobotBtn;
+        private Button buyAutoclicker;
+        private Button buyMulti;
         private Label BoostLabel;
         private Button Boostbtn;
         private PictureBox pictureBox5;
-        private Button button4;
-        private System.Windows.Forms.Timer robotti;
+        private Button RobotBtn;
+        private System.Windows.Forms.Timer robot;
         private Panel panel2;
         private Button SaveBtn;
     }
